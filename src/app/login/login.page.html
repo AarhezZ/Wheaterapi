@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="" [formGroup]="contactForm" (ngSubmit)="Login()">
+    <p>Ingresa tu usuario y contraseña</p>
+
+    <div id="container">
+      <ion-label id="Input">Email</ion-label>
+      <ion-input type="email" [email]="true" name="email" class="input" placeholder="Tu correo electronico"
+        formControlName="Email"></ion-input>
+      <ion-label id="Input">Contraseña</ion-label>
+      <ion-input placeholder="Contraseña" class="input" type="password" formControlName="Password"></ion-input>
+      <span id="registrar"> <strong><a href="/registrar" id="gray">Registrarse</a></strong></span>
+    </div>
+
+    <ion-button (click)="Login()">
+      <ion-icon slot="icon-only" name="person-circle">Registrar</ion-icon>
+    </ion-button>
+
+  </form>
+</ion-content>

@@ -1,20 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Noticias
     </ion-title>
+    <button style="float: right;" (click)="LogOut()">salir</button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Noticias!!</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="container" *ngFor="let info of covidInfo">
+    <img
+      src="https://www.paho.org/sites/default/files/styles/max_1500x1500/public/2021-05/covid-19-variants.jpg?itok=szJH1mCw"
+      alt="" id="img">
+    <div id="info">
+
+      <p>En Estados Unidos se han registraron <strong>{{info.positive | number}}</strong> casos positivos a Covid-19
+        desde
+        el inicio de la
+        pandemia.</p>
+
+      <p>
+        De las cuales se estima que ha habido alrrededor de <strong>{{info.death | number}} muertes</strong>
+      </p>
+      <p>
+        Se han reportado alrrededor de <strong>{{info.hospitalized | number}}</strong> hospitalizados
+      </p>
+
+      <p id="a">
+        Así lo afirma la API <a href="https://covidtracking.com/data/api"><strong>api.covidtracking.com</strong></a>
+      </p>
+    </div>
+
+
+
   </div>
 </ion-content>

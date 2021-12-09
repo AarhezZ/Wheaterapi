@@ -4,7 +4,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
 }
 
@@ -25,3 +25,24 @@
 #container a {
   text-decoration: none;
 }
+
+
+#info {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+#img {
+  padding-top: 30px !important;
+
+}
+
+#title {
+  color: white !important;
+  margin-top: 60px;
+}
+
+#a {
+  padding-top: 30px;
+}
+

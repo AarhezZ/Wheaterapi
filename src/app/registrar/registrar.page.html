@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="" [formGroup]="contactForm" (ngSubmit)="Registrar()">
+    <p>Registrate!</p>
+    <div id="container">
+      <ion-label>Nombre</ion-label>
+      <ion-input placeholder="Ingresa tu nombre" formControlName="Nombre" name="Nombre"></ion-input>
+
+      <ion-label>Apellido paterno</ion-label>
+      <ion-input placeholder="Ingresa tus Apellidos" formControlName="Apellidos" name="Apellidos"></ion-input>
+
+      <ion-label>Celular</ion-label>
+      <ion-input type="number" placeholder="Número de celuar" formControlName="Celular"></ion-input>
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-datetime value="" display-timezone="utc" formControlName="FechaNacimiento"></ion-datetime>
+
+      <ion-label>Email</ion-label>
+      <ion-input type="email" [email]="true" name="email" class="input" placeholder="Ingresa correo electronico"
+        formControlName="Email"></ion-input>
+      <ion-label>Contraseña</ion-label>
+      <ion-input placeholder="Contraseña" class="input" type="password" formControlName="Password"></ion-input>
+    </div>
+
+    <ion-button color="success" (click)="Registrar()">
+      <ion-icon slot="icon-only" name="create"></ion-icon>
+    </ion-button>
+
+  </form>
+</ion-content>
